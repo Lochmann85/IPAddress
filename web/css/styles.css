@@ -2,6 +2,8 @@ form {width: 50%;}
 
 .input-group-addon {background: #fff;}
 
+.input-group {margin-bottom: 10px;}
+
 .form-control[disabled] {background: #fff;}
 
 .panel {padding: 35px;}

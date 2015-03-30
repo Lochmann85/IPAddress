@@ -13,15 +13,27 @@
             <div class="container margin-top-more panel panel-default panel-standalone">
                 <div class="row">
                     <div class="col-xs-10">
-                        <h1>IP-Adresse</h1>
+                        <h1>IP-Address to City Finder</h1>
                         <form>
                             <fieldset class="row">
                                 <div class="col-xs-10">
                                     <div class="input-group">
                                         <span class="input-group-addon">
-                                            <i class="fa fa-envelope text-jumbo margin-right-half margin-left-half"></i>
+                                            <i class="fa fa-at text-jumbo margin-right-half margin-left-half"></i>
                                         </span>
-                                        <input class="form-control" type="text" name="text" value="{{ ip_address }}" disabled>
+                                        <input class="form-control" type="text" name="text" value="{{ ipAddress }}" disabled>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-globe text-jumbo margin-right-half margin-left-half"></i>
+                                        </span>
+                                        <input class="form-control" type="text" name="text" value="{{ geoip.countryName }}" disabled>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-building text-jumbo margin-right-half margin-left-half"></i>
+                                        </span>
+                                        <input class="form-control" type="text" name="text" value="{{ geoip.city }}" disabled>
                                     </div>
                                 </div>
                             </fieldset>

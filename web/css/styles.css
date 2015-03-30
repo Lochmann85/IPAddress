@@ -1,0 +1,7 @@
+form {width: 50%;}
+
+.input-group-addon {background: #fff;}
+
+.form-control[disabled] {background: #fff;}
+
+.panel {padding: 35px;}

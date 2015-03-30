@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'IP Adresse' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="https://www.iamstudent.at/css/iamstudent.css"/>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+{% endblock %}
+    
+{% block body %}
+    <main>
+        <section>
+            <div class="container margin-top-more panel panel-default panel-standalone">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <h1>IP-Adresse</h1>
+                        <form>
+                            <fieldset class="row">
+                                <div class="col-xs-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-envelope text-jumbo margin-right-half margin-left-half"></i>
+                                        </span>
+                                        <input class="form-control" type="text" name="text" value="{{ ip_address }}" disabled>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% block javascripts %}
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+{% endblock %}
+{% endblock %}

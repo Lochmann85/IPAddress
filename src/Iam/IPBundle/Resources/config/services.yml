@@ -1,0 +1,4 @@
+services:
+#    iam_ip.example:
+#        class: Iam\IPBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

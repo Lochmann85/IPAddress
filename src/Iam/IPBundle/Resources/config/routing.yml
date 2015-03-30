@@ -1,0 +1,3 @@
+_ip_default:
+    resource: "@IamIPBundle/Controller/DefaultController.php"
+    type:     annotation

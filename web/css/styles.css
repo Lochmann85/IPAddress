@@ -7,3 +7,9 @@ form {width: 50%;}
 .form-control[disabled] {background: #fff;}
 
 .panel {padding: 35px;}
+
+.panel-voucher {
+    box-shadow: none;
+    border: 4px solid #F82345;
+    border-radius: 10px;
+}

@@ -31,6 +31,12 @@
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon">
+                                            <i class="fa fa-circle-o text-jumbo margin-right-half margin-left-half"></i>
+                                        </span>
+                                        <input class="form-control" type="text" name="text" value="{{ geoip.Region }}" disabled>
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
                                             <i class="fa fa-building text-jumbo margin-right-half margin-left-half"></i>
                                         </span>
                                         <input class="form-control" type="text" name="text" value="{{ geoip.city }}" disabled>
@@ -40,6 +46,44 @@
                         </form>
                     </div>
                 </div>
+            </div>
+            <div class="container margin-top-more panel panel-default panel-standalone">
+                <h2>In deiner Stadt</h2>
+                {% for voucher in voucherCityContainer %}
+                <div class="row">
+                    <div class="col-xs-offset-3 col-xs-4 panel panel-voucher">
+                        <h3>
+                            {{ voucher.descriptionCompact }}
+                        </h3>
+                        <p>Stadt: {{ voucher.town.name }}</p>
+                        <p>Land: {{ voucher.town.country.name }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <h2>In deinem Land</h2>
+                {% for voucher in voucherCountryContainer %}
+                <div class="row">
+                    <div class="col-xs-offset-3 col-xs-4 panel panel-voucher">
+                        <h3>
+                            {{ voucher.descriptionCompact }}
+                        </h3>
+                        <p>Stadt: {{ voucher.town.name }}</p>
+                        <p>Land: {{ voucher.town.country.name }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+                <h2>Sonstige</h2>
+                {% for voucher in voucherRestContainer %}
+                <div class="row">
+                    <div class="col-xs-offset-3 col-xs-4 panel panel-voucher">
+                        <h3>
+                            {{ voucher.descriptionCompact }}
+                        </h3>
+                        <p>Stadt: {{ voucher.town.name }}</p>
+                        <p>Land: {{ voucher.town.country.name }}</p>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </section>
     </main>
